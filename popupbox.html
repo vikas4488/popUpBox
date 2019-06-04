@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+.popup-shed {
+display:none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #393a4a;
+    opacity: 0.8;
+    transition: opacity 0.15s linear;
+}
+.boxpopup{
+height:90%;
+width:90%;
+background-color:white;
+margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+border-radius:4px;
+radius-corner:4px;
+opacity: 1;
+}
+.popDiv{
+display:none;
+height:75%;
+overflow-y: scroll;
+
+}
+.closeButton1{
+
+    width: 20px;
+    height: 25px;
+    padding-left: 6px;
+    float: right;
+    margin-bottom:0;
+    background-color:white;
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size:16px;
+}
+.closeButton2{
+    float: right;
+    margin-right: 1%;
+    
+}
+.hrStyle{
+margin-top:5px;
+margin-bottom:5px;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+  $(document).click(function(e){
+  
+  var curClass=$(e.target).attr("class");
+  var popupDivId='#'+$(e.target).attr("popupid");
+  if(curClass=="popUpControl2")
+  {
+  $(popupDivId).parent().parent().css("display","block");
+    $(popupDivId).css("display","block");
+  }
+	else if(curClass=="popUpControl")
+    {
+    $(e.target).attr("class","popUpControl2")
+    $(popupDivId).wrap("<div class='popup-shed'></div>");
+    $(popupDivId).wrap("<div class='boxpopup'></div>");
+    $(popupDivId).parent()
+    .prepend("<button class='closeButton1'>x</button>");
+    
+    $(popupDivId).parent().find(".closeButton1").
+    wrap("<div style='width:100%;height:20px;'></div>");
+    $(popupDivId).before("<hr class='hrStyle'>");
+    
+    $(popupDivId).after("<div class='closeButton2 btn btn-danger'>close</div>");
+    $(popupDivId).after("<hr class='hrStyle'>");
+    
+    $(popupDivId).parent().parent().css("display","block");
+    $(popupDivId).css("display","block");
+    }
+    else if(curClass=="popup-shed"||curClass=="closeButton1"||curClass=="closeButton2 btn btn-danger")
+     $(".popup-shed").css("display","none");
+     
+     //alert(popupDivId);
+});
+});
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>  
+
+
+
+<div class="popDiv" id="newPop">
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+
+
+<button class="pbutton" popupid="shed1">open</button>
+<button class="popUpControl" popupid="newPop">open</button>
+<div id="logg">logg</div>
+<script>
+
+</script>
+</body>
+</html>
