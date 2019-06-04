@@ -15,7 +15,8 @@ $(document).ready(function(){
   }
 	else if(curClass=="popUpControl")
     {
-    $(e.target).attr("class","popUpControl2")
+    $(e.target).attr("class","popUpControl2");
+	$(popupDivId).addClass("container");
     $(popupDivId).wrap("<div class='popup-shed'></div>");
     $(".popup-shed").css({"display":"none",
     "position": "fixed",
