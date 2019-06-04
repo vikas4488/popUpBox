@@ -21,14 +21,13 @@ $(document).ready(function(){
     $(popupDivId).wrap("<div class='popup-shed'></div>");
     $(".popup-shed").css({"display":"none",
     "position": "fixed",
-    "background-color": "#393a4a",
      "transition": "opacity 0.15s linear",
       "top": 0,
       "right": 0,
     "bottom": 0,
     "left": 0,
      "z-index": 1040,
-    "opacity": 0.8});
+    "background-color":"rgba(0,0,0,0.8)"}});
     $(popupDivId).wrap("<div class='boxpopup'></div>");
     $(".boxpopup").css({"height":"90%",
 "width":"90%",
