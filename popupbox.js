@@ -1,8 +1,9 @@
 $(document).ready(function(){
 $(".popDiv").css({"display":"none",
 "width":"100%",
-"height":"90%",
-"overflow-y": "scroll"});
+"height":"auto",
+"max-height":$(window).height()-85+"px",
+"overflow-y": "auto"});
 });
 $(document).ready(function(){
   $(document).click(function(e){
@@ -30,7 +31,7 @@ $(document).ready(function(){
      "z-index": 1040,
     "background-color":"rgba(0,0,0,0.8)"});
     $(popupDivId).wrap("<div class='boxpopup'></div>");
-    $(".boxpopup").css({"height":"90%",
+    $(".boxpopup").css({"height":"auto",
 "width":"80%",
 "background-color":"white",
 "margin-top": "20px",
@@ -56,8 +57,7 @@ $(document).ready(function(){
 				"margin-bottom":"5px"});
     $(popupDivId).after("<div class='closeButton2 btn btn-danger'>close</div>");
     $(".closeButton2").css({"width": "100%",
-    
-    "margin-bottom": "2px"});
+   });
     
     
     $(popupDivId).parent().parent().css("display","block");
