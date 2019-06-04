@@ -1,6 +1,7 @@
 $(document).ready(function(){
 $(".popDiv").css({"display":"none",
-"height":"75%",
+"width":"100%",
+"height":"90%",
 "overflow-y": "scroll"});
 });
 $(document).ready(function(){
@@ -30,12 +31,10 @@ $(document).ready(function(){
     "background-color":"rgba(0,0,0,0.8)"});
     $(popupDivId).wrap("<div class='boxpopup'></div>");
     $(".boxpopup").css({"height":"90%",
-"width":"90%",
+"width":"80%",
 "background-color":"white",
 "margin-top": "20px",
-    "margin-right": "20px",
-    "margin-bottom": "20px",
-    "margin-left": "20px",
+    "margin-left": "10%",
 "border-radius":"4px",
 "radius-corner":"4px",
 "opacity": 1});
@@ -52,13 +51,14 @@ $(document).ready(function(){
     "font-size":"16px"});
     $(popupDivId).parent().find(".closeButton1").
     wrap("<div style='width:100%;height:20px;'></div>");
-    $(popupDivId).before("<hr class='hrStyle'>");
+    $(popupDivId).append("<hr class='hrStyle'>");
     $(".hrStyle").css({"margin-top":"5px",
 				"margin-bottom":"5px"});
     $(popupDivId).after("<div class='closeButton2 btn btn-danger'>close</div>");
-    $(".closeButton2").css({"float": "right",
-    "margin-right": "1%"});
-    $(popupDivId).after("<hr class='hrStyle'>");
+    $(".closeButton2").css({"width": "100%",
+    
+    "margin-bottom": "2px"});
+    
     
     $(popupDivId).parent().parent().css("display","block");
     $(popupDivId).css("display","block");
