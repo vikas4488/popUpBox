@@ -6,17 +6,18 @@ $(".popDiv").css({"display":"none",
 $(document).ready(function(){
   $(document).click(function(e){
   
+  var markerButton=$(e.target).attr("marker");
   var curClass=$(e.target).attr("class");
   var popupDivId='#'+$(e.target).attr("popupid");
-  if(curClass=="popUpControl2")
+  if(markerButton=="popUpControl2")
   {
   $(popupDivId).parent().parent().css("display","block");
     $(popupDivId).css("display","block");
   }
-	else if(curClass=="popUpControl")
+	else if(markerButton=="popUpControl")
     {
-    $(e.target).attr("class","popUpControl2");
-	$(popupDivId).addClass("container");
+    $(e.target).attr("marker","popUpControl2");
+    $(popupDivId).addClass("container");
     $(popupDivId).wrap("<div class='popup-shed'></div>");
     $(".popup-shed").css({"display":"none",
     "position": "fixed",
@@ -66,6 +67,6 @@ $(document).ready(function(){
     else if(curClass=="popup-shed"||curClass=="closeButton1"||curClass=="closeButton2 btn btn-danger")
      $(".popup-shed").css("display","none");
      
-     //alert(popupDivId);
+    
 });
 });
