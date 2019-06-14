@@ -55,7 +55,7 @@ $(document).ready(function(){
     $(popupDivId).append("<hr class='hrStyle'>");
     $(".hrStyle").css({"margin-top":"5px",
 				"margin-bottom":"5px"});
-    $(popupDivId).after("<div class='closeButton2 btn btn-danger'>close</div>");
+    $(popupDivId).after("<div class='closeButton2 btn btn'>close</div>");
     $(".closeButton2").css({"width": "100%",
    });
     
