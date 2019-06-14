@@ -63,7 +63,7 @@ $(document).ready(function(){
     $(popupDivId).parent().parent().css("display","block");
     $(popupDivId).css("display","block");
     }
-    else if(curClass=="popup-shed"||curClass=="closeButton1"||curClass=="closeButton2 btn btn-danger")
+    else if(curClass=="popup-shed"||curClass=="closeButton1"||curClass=="closeButton2 btn btn-default")
      $(".popup-shed").css("display","none");
      
     
