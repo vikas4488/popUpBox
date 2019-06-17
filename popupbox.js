@@ -29,7 +29,7 @@ $(document).ready(function(){
     "bottom": 0,
     "left": 0,
      "z-index": 1040,
-    "background-color":"rgba(0,0,0,0.8)"});
+    "background-color":"rgba(0,0,0,0.4)"});
     $(popupDivId).wrap("<div class='boxpopup'></div>");
     $(".boxpopup").css({"height":"auto",
 "width":"80%",
